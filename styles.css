@@ -1,0 +1,245 @@
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* retro-todo NES styles  */
+#retro {
+    font-family: 'VT323', monospace;
+}
+
+@media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+    .nes-container,
+    .nes-container.is-rounded,
+    .nes-container.is-rounded.is-dark {
+    border-image-repeat: inherit;
+    }
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #000000;
+}
+
+/* utilities */
+
+.min-h-100 {
+    min-height: 100vh;
+}
+
+.relative {
+    position: relative;
+}
+
+/* text */
+
+.small {
+    font-size: 12px;
+}
+
+.drop-shadow {
+    filter: drop-shadow(2px 3px 3px #000);
+}
+
+/* add transition to task items*/ 
+
+.alert,
+ul,
+ul li,
+ul li > a {
+    transition: all .3s ease-in-out;
+}
+
+#todo-list li,
+#simple-todo {
+    border-radius: 10px;
+}
+
+.transition {
+    transition: all .1s ease-in;
+}
+
+/* add checked class to item */
+
+#traversy-todo li.checked,
+#w3-todo-list li.checked,
+#retro li.task-done,
+#todo-list li.checked,
+#todo-list li.checked > .check-item > svg {
+    transition: all .3s ease-in-out;
+}
+
+#traversy-todo li.checked,
+#w3-todo-list li.checked {
+    background: #d6d6d6;
+    border-color: #d6d6d6;
+    text-decoration: line-through;
+}
+
+#todo-list li.checked {
+    background: #eebbc3 !important;
+    text-decoration: line-through;
+    color: #a786df;
+    /* transform: scale(0.9); */
+    /* transform: perspective(1000px) rotateY(45deg); */
+}
+#todo-list li.checked .modal-content {
+    background-color: #eebbc3 !important;
+    text-decoration: line-through;
+    color: #a786df;
+    /* transform: scale(0.9); */
+}
+#todo-list li.checked > .check-item > svg {
+    color: rebeccapurple;
+    background: #b8c1ec;
+}
+
+#retro li.task-done {
+    background: hotpink;
+    border-color: black;
+    text-decoration: line-through;
+    box-shadow: 5px 5px 5px #000;
+    color: #fff;
+}
+
+/* add text stroke to close X button */
+
+#traversy-todo li > a,
+#w3-todo-list li > a {
+    color: transparent;;
+    -webkit-text-stroke: 1px #000;
+}
+
+#traversy-todo li.checked > a,
+#w3-todo-list li.checked > a {
+    color: #000;
+}
+
+/* glassmorphism */
+
+.base {
+    /* width: 200px;
+    height: 200px; */
+    background: rgba(255,255,255,0.4);
+    position: relative;
+  }
+  .blur {
+    /* position: absolute; */
+    /* bottom: 25px;
+    right: 162px;
+    width: 200px;
+    height: 200px; */
+    background: rgba(255,255,255,0.4);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+
+  /* text color */
+
+  .text-offwhite {
+    color: #fffffe;
+  }
+  .text-lightgrey {
+    color: #b8c1ec;
+  }
+  .text-lavender {
+    color: #b8c1ec;
+  }
+
+  .text-blush {
+    color: #eebbc3; 
+  }
+
+  /* colors */
+
+  .bg-midnight {
+      background: midnightblue;
+      background: #232946;
+  }
+
+  .bg-springgreen {
+    background: mediumspringgreen;
+  }
+
+  .bg-offwhite {
+    background: #fffffe;
+  }
+  .bg-lavender {
+    background: #b8c1ec;
+  }
+
+  .bg-blush {
+    background: #eebbc3; 
+  }
+
+  .bg-pink {
+      background: pink;
+  }
+
+  .bg-turqoise {
+      background: turquoise;
+  }
+  
+  .bg-aliceblue {
+      background: aliceblue;
+  }
+
+  /* neon */
+
+  .bg-red {
+      background: #fe0000;
+  }
+  .bg-yellow {
+      background: #fdfe02;
+  }
+  .bg-lime {
+      background: #0bff01;
+  }
+  .bg-royal {
+      background: #011efe;
+  }
+  .bg-lime {
+      background: #0bff01;
+  }
+  .bg-hotpink {
+      background: #fe00f6;
+  }
+
+  .bg-rainbow {
+    background: #8A2387;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F27121, #E94057, #8A2387); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+  .bg-teal {
+    background: #a8ff78;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #78ffd6, #a8ff78);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #78ffd6, #a8ff78); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+  .bg-nes-sunset {
+      background: url(/img/nes_sunset.png) center;
+      background-size: cover;
+  }
+  .bg-nes-landscape {
+      background: url(/img/nes_landscape.jpg) center;
+      background-size: cover;
+  }
+
+  /* simple todo item delete X btn */
+
+  .delete-item {
+      position: absolute;
+      right: 5px;
+        top: 5px;
+  }
+  .check-item {
+      position: absolute;
+      left: 5px;
+        top: 5px;
+  }
+  #todo-list .modal-content {
+      border-radius: 10px;
+  }

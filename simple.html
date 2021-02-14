@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    
+    <!-- Compiled and minified CSS -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+
+    <link rel="stylesheet" href="styles.css"> 
+    <title>Simple Todo List</title>
+</head>
+<body class="animate__animated animate__fadeIn bg-midnight">
+    <div class="animate__animated animate__fadeInDown" id="nav"></div>
+    <div class="container w-75 p-0 mx-auto min-h-100">
+        <div class="row p-5">
+            <div id="simple-todo" class="col-lg-12 d-flex flex-column align-items-start justify-content-center p-5 shadow-lg bg-lavender">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-edit bg-blush p-2 rounded-circle drop-shadow" width="60" height="60" viewBox="0 0 24 24" stroke-width="1.5" stroke="#232946" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M9 7h-3a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-3" />
+                        <path d="M9 15h3l8.5 -8.5a1.5 1.5 0 0 0 -3 -3l-8.5 8.5v3" />
+                        <line x1="16" y1="5" x2="19" y2="8" />
+                    </svg>
+                    <h1 class="pb-4 fw-bolder display-1 text-light drop-shadow">Simple Task list</h1>
+                    <div class="input-group">
+                        <button 
+                        id="add-btn"
+                        class="btn btn-outline-light bg-midnight" type="button" 
+                        >Add task</button>
+                        <input 
+                        id="input-value"
+                        type="text" 
+                        class="form-control" placeholder="Add new task here..." aria-label="Example text with button addon" aria-describedby="add_task">
+                    </div>
+            </div>
+            <ul class="list-unstyled d-flex flex-wrap mt-3 p-0 w-100" id="todo-list"></ul>
+        </div><!--/end row-->
+    </div><!--/end container-->
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="/js/simple.js"></script> 
+    <script type="module">
+        import { getNav } from '/js/nav.js';
+    </script>
+</body>
+</html>
