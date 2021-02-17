@@ -76,25 +76,14 @@ function addTodo() {
 
     // removes any whitespace between input values (i.e. if a task has multiple words); assigning the inputValue to the modal id creates a unique ID for each task, and as such a unique modal; but IDs can't have whitespace, so it needs to be removed to create a string
 
+    // remove whitespace in user input value to apply value to modal ID
     // const modalId = inputValue.replace(/\s/g,''); 
+
+    // remove all characters other than letters in user input value
     const modalId = inputValue.replace(/[^a-zA-Z0-9]/g, ''); 
 
     // https://stackoverflow.com/questions/6555182/remove-all-special-characters-except-space-from-a-string-using-javascript
-    // console.log(str.replace(/[^a-zA-Z ]/g, ""));
-
-    const str = "abc's test#s";
-    console.log(str.replace(/[^a-zA-Z0-9]/g, ''));
-
-    
-
-
-    // tests to see if inputvalue has whitespace
-    // function whitespaceCheck() {
-    //     if (/\s/.test(inputValue)) {
-    //         console.log("There is whitewspace");
-    //     } 
-    // }
-    // whitespaceCheck();
+    // console.log(str.replace(/[^a-zA-Z ]/g, ""));    
 
     // add modal for each task to write additional notes
     let notesModal = document.createElement('span');
@@ -206,12 +195,30 @@ console.log(rand);
 
 // window.location.pathname 
 
-const simpleTodo = window.location.href;
+const simpleTodo = window.location.pathname;
 console.log(simpleTodo);
 
-if(window.location.href === 'simple.html') {
-    document.querySelector('nav').classList.add('bg-midnight', 'text-blush');
+if(simpleTodo == '/simple.html') {
+    // let nav = document.getElementsByTagName('nav')
+    // nav.classList.remove('bg-light');
+    // // nav.classList.add('bg-midnight', 'navbar-dark');
+    document.querySelector('body').style.background = "pink";
+    document.querySelector('.navbar').classList.remove('bg-light', 'navbar-light');
 }
+
+
+// todoInput.forEach(function(){
+//     // var value = this.val();
+//     if (todoList.indexOf(todoInput) == -1) {
+//         todoList.push(todoInput);
+//     }
+//     else {
+//         this.alert("duplicate");
+//     }
+// });
+
+
+
 
   
 

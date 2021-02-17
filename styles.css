@@ -68,6 +68,7 @@ ul li > a {
 #todo-list li.checked,
 #todo-list li.checked > .check-item > svg {
     transition: all .3s ease-in-out;
+    order: 12;
 }
 
 #traversy-todo li.checked,
@@ -228,7 +229,13 @@ ul li > a {
       background-size: cover;
   }
 
-  /* simple todo item delete X btn */
+  /* simple todo/NES item delete X btn */
+
+  #w3-todo-list a span.delete-item {
+    position: absolute;
+    right: 10px;
+    top: 13px;
+  }
 
   .delete-item {
       position: absolute;
@@ -242,4 +249,18 @@ ul li > a {
   }
   #todo-list .modal-content {
       border-radius: 10px;
+  }
+
+  /* responsive */
+
+  @media (min-width: 601px) {
+      .nes-field {
+          width: 75%;
+      }
+  }
+  @media (max-width: 601px) {
+      #add-todo, 
+      .nes-field {
+          width: 100%;
+      }
   }
